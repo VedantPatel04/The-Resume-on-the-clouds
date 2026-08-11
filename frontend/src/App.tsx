@@ -119,7 +119,7 @@ export default function App() {
             Vedant Patel
           </h1>
           <p className="mt-3 text-sm text-muted-foreground">
-            Los Angeles, CA · M.S. Computer Science candidate
+            Los Angeles, CA · M.S. Computer Science
           </p>
           <div className="mt-6 flex flex-wrap gap-2 text-sm">
             <a
