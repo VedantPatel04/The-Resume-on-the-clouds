@@ -291,9 +291,6 @@ export default function App() {
           </div>
         </Section>
 
-        <footer className="mt-14 border-t border-border pt-6 text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Vedant Patel
-        </footer>
       </div>
     </main>
   );

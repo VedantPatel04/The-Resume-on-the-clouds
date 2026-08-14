@@ -16,6 +16,6 @@ A static React resume on **S3 + CloudFront**, supported by an **API Gateway + La
 | Frontend | Vite, React, TypeScript, Tailwind |
 | Backend  | Python Lambda, DynamoDB           |
 | Cloud    | S3, CloudFront, API Gateway       |
-| CI/CD    | GitHub Actions (Adding soon...)                    |
+| CI/CD    | GitHub Actions                   |
 
 
