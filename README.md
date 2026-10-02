@@ -1,6 +1,6 @@
 # The Resume on the cloud (s)
 
-Hi Recruiter/Peer/Friend or Stalker ... I'm **Vedant Patel**. This repo is hosted on AWS with a serverless counter that lets me know if you actually read my resume when I sent it over :P.
+Hi Recruiter/Peer/Friend ... I'm **Vedant Patel**. This repo is hosted on AWS with a serverless counter that lets me know if you actually read my resume when I sent it over :P.
 
 **Live site:** [https://d2ox5hc5bhosl2.cloudfront.net/](https://d2ox5hc5bhosl2.cloudfront.net/)
 
