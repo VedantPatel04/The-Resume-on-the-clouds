@@ -171,14 +171,66 @@ export default function App() {
           <Entry
             heading="California State University, Northridge"
             sub="M.S. Computer Science"
-            meta="Northridge, CA · Present – May 2028"
+            meta="Aug. 2026 – Dec. 2027 (Expected)"
           />
           <Entry
             heading="University of California, San Diego"
             sub="B.S. Computer Science"
-            meta="La Jolla, CA · Sept. 2024 – June 2026"
+            meta="Sept. 2024 – June 2026"
             bullets={[
-              "Relevant Coursework: Database Principles, Data Structures & Algorithms, Software Engineering, Machine Learning Algorithms, Recommender Systems, Web Mining.",
+              "Relevant Coursework: Advanced Data Structures, Algorithm Analysis, Database Systems, Software Engineering, Operating Systems, Machine Learning Algorithms, Computer Architecture.",
+            ]}
+          />
+        </Section>
+
+        <Section title="Experience">
+          <Entry
+            heading="Software Engineer Intern"
+            sub="SciQuel"
+            meta="Remote · July 2026 – Sept. 2026"
+            bullets={[
+              "Cut latency for article fetches by 34% (350ms → 230ms) by removing redundant text parsing from a Markdown rendering pipeline.",
+              "Added tag-based cache invalidation to profile fetches, making updates visible in 500ms (down from 60s).",
+              "Integrated Storybook and Mock Service Worker into a reusable UI testing environment, enabling React component review without a live backend.",
+            ]}
+          />
+          <Entry
+            heading="STEM Technical Instructor"
+            sub="College of the Canyons"
+            meta="Valencia, CA · Aug. 2023 – Aug. 2024"
+            bullets={[
+              "Improved average exam performance by 25% for 12 students in a data structures and algorithms course through one-on-one debugging sessions and personally curated practice problems.",
+            ]}
+          />
+        </Section>
+
+        <Section title="Projects">
+          <Entry
+            heading="NewCardForMe"
+            sub="Django, React, Docker, PostgreSQL"
+            href="https://github.com/VedantPatel04/Cards"
+            bullets={[
+              "Cut merchant categorization latency by 75% by consolidating Postgresql lookups to a single batched query.",
+              "Added a dedicated database-write pipeline for new statement imports, increasing throughput for concurrent uploads by 32%.",
+              "Achieved 91% savings-estimation accuracy across 5000 transactions via addition of a spending threshold to the card-scoring service.",
+            ]}
+          />
+          <Entry
+            heading="iCalendar (Open Source Contributor)"
+            sub="Python"
+            href="https://github.com/collective/icalendar/pull/1615"
+            bullets={[
+              "Increased attachment-handling success by 40% across 20 test cases by automating file encoding for the ALARM attachments property.",
+              "Enforced audio alarm attachment limits through setter validation, rejecting 100% of invalid configurations across 10 test cases.",
+            ]}
+          />
+          <Entry
+            heading="Resume on the Cloud"
+            sub="AWS (S3, Lambda, CloudFront), Python, TypeScript"
+            href="https://github.com/VedantPatel04/The-Resume-on-the-clouds"
+            bullets={[
+              "Deployed serverless resume infrastructure on AWS with S3, Lambda functions and CloudFront with live visitor-count tracking via atomic DynamoDB updates for concurrency.",
+              "Automated deploys with a GitHub Actions CI/CD pipeline covering build-checks, unit tests, and linting.",
             ]}
           />
         </Section>
@@ -193,16 +245,17 @@ export default function App() {
               {
                 label: "Tools & Frameworks",
                 items: [
-                  "Next.js",
                   "Django",
+                  "Next.js",
                   "FastAPI",
                   "React",
                   "Git",
                   "Docker",
                   "CI/CD",
                   "AWS (Lambda, S3, DynamoDB)",
+                  "Agile (Jira)",
+                  "Alembic",
                   "Codex/Claude Code",
-                  "Swagger/OpenAPI",
                 ],
               },
               {
@@ -210,14 +263,17 @@ export default function App() {
                 items: [
                   "PostgreSQL",
                   "MongoDB",
-                  "Pytest",
-                  "Vitest",
-                  "Storybook",
-                  "TailwindCSS",
-                  "Supabase",
-                  "Prisma",
+                  "Google Cloud",
+                  "Authentication (OAuth, JWT)",
                   "SQLAlchemy",
+                  "Prisma",
+                  "Pydantic",
+                  "Pytest",
+                  "Storybook",
                   "Vite",
+                  "Vitest",
+                  "Pandas",
+                  "Numpy",
                 ],
               },
             ].map((group) => (
@@ -238,59 +294,6 @@ export default function App() {
               </div>
             ))}
           </div>
-        </Section>
-
-        <Section title="Experience">
-          <Entry
-            heading="Software Engineer Intern"
-            sub="SciQuel"
-            meta="Remote · July 2026 – Sept. 2026"
-            bullets={[
-              "Built testing infrastructure for React components and a content versioning layer for Next.js API routes.",
-              "Minimized UI component review time by 40% across a 5 developer team via reusable Storybook templates and Mock Service Worker.",
-              "Reduced editor rollback time by 30% via automated MongoDB snapshots upon publish and restore of prior versions.",
-            ]}
-          />
-          <Entry
-            heading="STEM Technical Instructor"
-            sub="College of the Canyons"
-            meta="Valencia, CA · Aug. 2023 – Aug. 2024"
-            bullets={[
-              "Improved average exam performance by 25% for 12 students in a data structures and algorithms course through one-on-one debugging sessions and personally curated practice problems.",
-              "Increased average exam performance by 15% for 10 students of an integral calculus course by hosting weekly review workshops.",
-            ]}
-          />
-        </Section>
-
-        <Section title="Projects">
-          <Entry
-            heading="NewCardForMe"
-            sub="Django, React, Docker, PostgreSQL, Python, TypeScript, TailwindCSS"
-            href="https://github.com/VedantPatel04/Cards"
-            bullets={[
-              "Built a full-stack REST API platform to help users discover personalized credit card recommendations based on spending habits, secured via JWT auth.",
-              "Minimized the categorization service codebase by 20% via implementation of a query resolution service to consolidate 50+ reward rules into 7 buckets, backed by a Redis cache and Postgres user overrides.",
-              "Protected recommendation and statement ingestion endpoints by writing 75+ unit and integration tests using Pytest and Vitest.",
-            ]}
-          />
-          <Entry
-            heading="iCalendar (Open Source Contributor)"
-            sub="Python"
-            href="https://github.com/collective/icalendar/pull/1615"
-            bullets={[
-              "Extended RFC 5545 API coverage in icalendar (11M+ monthly downloads) by implementing 5 accessors for the attachments property across 4 calendar components (Alarm, Events, Todo, Journal).",
-              "Enforced AUDIO alarm attachment limits and protected against invalid assignments by implementing a 20-test suite using pytest for attachment validation edge cases.",
-            ]}
-          />
-          <Entry
-            heading="Resume on the Cloud"
-            sub="Python, AWS (S3, Lambda, CloudFront), TypeScript"
-            href="https://github.com/VedantPatel04/The-Resume-on-the-clouds"
-            bullets={[
-              "Deployed serverless resume infrastructure on AWS with S3, Lambda functions and CloudFront with live visitor-count tracking via atomic DynamoDB updates for concurrency.",
-              "Automated deployment with a GitHub Actions CI/CD pipeline covering build-checks, unit-tests and linting.",
-            ]}
-          />
         </Section>
 
       </div>
